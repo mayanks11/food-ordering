@@ -1,0 +1,58 @@
+POST http://localhost:4000/api/item
+Content-Type: application/json
+
+{
+    "item": "bhbhb",
+    "price": 412
+}
+
+
+###
+
+
+Get http://localhost:4000/api/items
+Content-Type: application/json
+
+###
+
+PUT http://localhost:4000/api/item/6288770ceee53e8764e4f4dd
+Content-Type: application/json
+
+{
+    "item": "Chicken Biryani",
+    "price": 70
+}
+
+###
+DELETE http://localhost:4000/api/item/6288778eb815b2bc15493b51
+Content-Type: application/json
+
+###
+
+GET http://localhost:4000/api/items/6289237c3b2785bb813c32f8
+Content-Type: application/json
+
+
+
+###
+POST http://localhost:4000/api/cart
+Content-Type: application/json
+
+{
+    "item": "dwdwdw",
+    "price": 4121
+}
+
+###
+
+Get http://localhost:4000/api/carts
+Content-Type: application/json
+
+###
+DELETE http://localhost:4000/api/cart/628c9f5259d7f588d610bcb7
+Content-Type: application/json
+
+###
+DELETE http://localhost:4000/api/empty
+Content-Type: application/json
+

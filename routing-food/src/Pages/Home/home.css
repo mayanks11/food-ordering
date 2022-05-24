@@ -1,0 +1,44 @@
+.middle-img{
+    height: 750px;
+    width: 100%;
+  }
+  
+  .middle-container{
+    position: relative;
+    /* top: 70px; */
+  }
+  .middle-h2{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    color: #fff;
+  }
+  .middle-p{
+    position: absolute;
+    bottom: 8%;
+    left: 35%;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .bottom-container{
+    position: relative;
+    margin: 7% 10%;
+  }
+  .card{
+    margin: 20px;
+  }
+  .burger-img, .biryani-img, .pizza-img{
+    width: 100%;
+  }
+  .pizza-img{
+    height: 240px;
+  }
+  .bottom-p{
+    position: absolute;
+    left: 30%;
+    margin-top: 40px;
+  }
+  
+  .icon{
+    margin: 10px;
+  }

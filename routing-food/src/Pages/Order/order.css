@@ -1,0 +1,23 @@
+/* .navbar{
+    display: none;
+} */
+
+.food-content{
+    display: inline-block;
+    /* margin: 20px; */
+    text-align: center;
+}
+/* .nav-item{
+    margin: 10px;
+} */
+.card{
+    width: 18rem;
+
+}
+.order{
+    text-align: center;
+    
+}
+ /* body{
+    background-color: grey;
+} */

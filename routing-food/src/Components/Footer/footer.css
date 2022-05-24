@@ -1,0 +1,14 @@
+.footer{
+    padding-top: 10px;
+    background-color: rgb(28, 153, 105);
+    text-align: center;
+    position: relative;
+    position: fixed-bottom;
+    bottom: 0;
+    width: 100%;
+}
+.copy-icon{
+    position: absolute;
+    left: 625px;
+    top: 15px;
+  }
