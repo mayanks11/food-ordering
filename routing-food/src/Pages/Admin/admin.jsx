@@ -1,6 +1,7 @@
 import "./admin.css";
 import React, {useEffect,useState} from 'react';
 import axios from 'axios';
+import {NavLink} from 'react-router-dom';
 
 
 function Admin (){
@@ -111,6 +112,35 @@ function Admin (){
 
   return (
     <div className="App">
+       <nav class="order-nav navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <NavLink to = "/" className="navbar-brand">Food Order
+        </NavLink>
+        
+        <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+           {/* <a class="a-nav nav-link active" aria-current="page" href= "">Order Now</a> */}
+           <NavLink to = "/" className="a-nav nav-link active">Home</NavLink>
+           
+          
+           
+          
+        </li>
+        {/* <li className="nav-item">
+        <NavLink to = "/cart" className="a-nav nav-link active">Cart</NavLink>
+        </li> */}
+
+        <li className="nav-item">
+          <a className="a-nav nav-link active" href="mailto:mayank31rbt@gmail.com">Contact Us</a>
+        </li>        
+      </ul>
+      </div>
+    
+  </nav>
       <h1>Admin Page</h1>
 
       <p>Add Food Items</p>
@@ -118,7 +148,7 @@ function Admin (){
       <form className="top">
         <input className = "form-input" type="text" placeholder="Food Name" name="item" onChange={(e)=>{setItemText(e.target.value)}}/>
         <input className = "form-input" type="text" placeholder="Food Price" name="item-price" onChange={(e)=>{setItemPrice(e.target.value)}}/>
-        <button className = "form-button" type="submit" onClick={e => {addItem()}}>submit</button>
+        <button className = "form-button btn btn-success" type="submit" onClick={e => {addItem()}}>submit</button>
       </form>
       <br/>
 
@@ -136,8 +166,8 @@ function Admin (){
                   <ul>
                   <li className = "food-content">{foodItem.item}</li>
                   <li className = "food-content">{foodItem.price}</li>
-                  <button className = "button"  onClick={() => {deleteItem(foodItem._id); refreshPage() } }>Delete</button>
-              <button className = "button" onClick = {() => {setIsUpdating(foodItem._id)}}>Update</button>  
+                  <button className = "button btn btn-danger"  onClick={() => {deleteItem(foodItem._id); refreshPage() } }>Delete</button>
+              <button className = "button btn btn-warning" onClick = {() => {setIsUpdating(foodItem._id)}}>Update</button>  
                   </ul>
                   
                             
@@ -168,7 +198,7 @@ function Admin (){
         ))
       }
 
-    <button className = "button"  onClick={() => {deleteAllItem(); refreshPage() } }>Complete order</button>
+    <button className = "button btn btn-info"  onClick={() => {deleteAllItem(); refreshPage() } }>Complete order</button>
       </div>
       
       

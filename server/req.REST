@@ -1,10 +1,11 @@
 POST http://localhost:4000/api/item
 Content-Type: application/json
 
-{
+
+    {
     "item": "bhbhb",
     "price": 412
-}
+    }
 
 
 ###
@@ -54,5 +55,33 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:4000/api/empty
+Content-Type: application/json
+
+
+###
+POST http://localhost:4000/api/order
+Content-Type: application/json
+
+[
+    {
+        "item": "abc",
+        "price": 3254
+    },
+    {
+        "item": "adw",
+        "price": 354
+    },
+    {
+        "item": "dfe",
+        "price": 3214
+    }
+]
+
+###
+DELETE http://localhost:4000/api/orderEmpty
+Content-Type: application/json
+
+###
+Get http://localhost:4000/api/orders
 Content-Type: application/json
 

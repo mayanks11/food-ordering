@@ -16,6 +16,7 @@ app.use(express.static('public'));
 app.use(express.json());
 const Food = require('./models/foodItems');
 const Cart = require('./models/cart');
+
 //PORT
 const PORT = process.env.PORT || 4000;
 
@@ -23,6 +24,7 @@ const PORT = process.env.PORT || 4000;
 
 const FoodItemRoute = require('./routes/foodItems');
 const cartRoute = require('./routes/cart');
+
 
 app.use(cors({origin: '*'}))
 // Connect to mongoDB
@@ -32,6 +34,8 @@ app.use(cors({origin: '*'}))
 
  mongoose.createConnection('mongodb+srv://mayank:admin1234@cart.gv2wn.mongodb.net/?retryWrites=true&w=majority');
  console.log('Cart Database connected');
+
+
 
 
 

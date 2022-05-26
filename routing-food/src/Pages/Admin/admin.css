@@ -1,6 +1,7 @@
 .food-content{
     display: inline-block;
     margin: 10px;
+    text-align: justify;
 }
 .button{
     margin: 20px;
@@ -9,4 +10,7 @@
 .item{
     display: inline-block;
 
+}
+.form-input{
+    margin: 10px;
 }

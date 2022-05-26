@@ -1,6 +1,6 @@
 import  ReactDOM from 'react-dom/client';
 import './App.css';
-import { Navbar, Footer } from "./Components";
+import {  Footer } from "./Components";
 import {Home, Order, Admin, Cart} from './Pages';
 // import Order from './Order';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
@@ -21,7 +21,7 @@ const App = () => {
         <Route path = "/admin" element = {<Admin/>}/>
         <Route path = "/cart" element = {<Cart/>}/>
       </Routes>
-       {/* <Footer/> */}
+       <Footer/>
     </Router>
     
     </>
