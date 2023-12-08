@@ -21,7 +21,7 @@ function Admin (){
   }
   const deleteAllItem = async () => {
     try {
-      const res = await axios.delete(`http://localhost:4000/api/empty`)
+      const res = await axios.delete(`https://food-ordering-pi-eta.vercel.app/empty`)
      //  console.log(res.data)
      
     } catch (error) {
@@ -32,7 +32,7 @@ function Admin (){
   useEffect(()=>{
     const getCartItem = async ()=>{
       try {
-        const res = await axios.get(`http://localhost:4000/api/carts`)
+        const res = await axios.get(`https://food-ordering-pi-eta.vercel.app/carts`)
         setCartItems(res.data)
         // console.log('render')
       } catch (error) {
@@ -46,7 +46,7 @@ function Admin (){
     //  e.preventDefault();
      console.log('dfsdfds')
      try {
-       const res = await axios.post(`http://localhost:4000/api/item`,{item: itemText, price: itemPrice})
+       const res = await axios.post(`https://food-ordering-pi-eta.vercel.app/item`,{item: itemText, price: itemPrice})
         console.log(res);
        setFoodItems(prev => [...prev, res.data]);
       // setListItems(prev => [...prev, res.data])
@@ -59,7 +59,7 @@ function Admin (){
    useEffect(()=>{
       const getFoodItem = async ()=>{
         try {
-          const res = await axios.get(`http://localhost:4000/api/items`)
+          const res = await axios.get(`https://food-ordering-pi-eta.vercel.app/items`)
           setFoodItems(res.data)
           // console.log('render')
         } catch (error) {
@@ -72,7 +72,7 @@ function Admin (){
    // Delete items
    const deleteItem = async (id) => {
      try {
-       const res = await axios.delete(`http://localhost:4000/api/item/${id}`)
+       const res = await axios.delete(`https://food-ordering-pi-eta.vercel.app/item/${id}`)
       //  console.log(res.data)
       const newListItem = foodItems.filter(item=>item.id !== id);
       setFoodItems(newListItem);
@@ -87,7 +87,7 @@ function Admin (){
    const updateItem = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:4000/api/item/${isUpdating}`, {item: updateItemText, price: updateItemPrice})
+      const res = await axios.put(`https://food-ordering-pi-eta.vercel.app/item/${isUpdating}`, {item: updateItemText, price: updateItemPrice})
       
       console.log(res.data);
       setNewItemText('');
