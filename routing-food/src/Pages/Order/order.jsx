@@ -15,9 +15,9 @@ const Order = () =>{
 
     const addToCart = async(id) =>{
       try {
-        const res = await axios.get(`http://localhost:4000/api/items/${id}`)
+        const res = await axios.get(`https://food-ordering-pi-eta.vercel.app/items/${id}`)
         console.log(res.data.item);
-        const abc = await axios.post(`http://localhost:4000/api/cart`, {item: res.data.item, price: res.data.price})
+        const abc = await axios.post(`https://food-ordering-pi-eta.vercel.app/cart`, {item: res.data.item, price: res.data.price})
         console.log(abc.data);
   
         } catch (error) {
@@ -35,7 +35,7 @@ const Order = () =>{
   useEffect(()=>{
     const getFoodItem = async ()=>{
       try {
-        const res = await axios.get(`http://localhost:4000/api/items`);
+        const res = await axios.get(`https://food-ordering-pi-eta.vercel.app/items`);
         setFoodItems(res.data)
         // console.log('render')
       } catch (error) {
