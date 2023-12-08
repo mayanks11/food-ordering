@@ -14,7 +14,7 @@ const Cart = () =>{
     useEffect(()=>{
         const getCartItem = async ()=>{
           try {
-            const res = await axios.get(`http://localhost:4000/api/carts`)
+            const res = await axios.get(`https://food-ordering-pi-eta.vercel.app/carts`)
             setCartItems(res.data)
             // console.log('render')
           } catch (error) {
@@ -26,7 +26,7 @@ const Cart = () =>{
     
      const deleteItem = async (id) => {
         try {
-          const res = await axios.delete(`http://localhost:4000/api/cart/${id}`)
+          const res = await axios.delete(`https://food-ordering-pi-eta.vercel.app/cart/${id}`)
          //  console.log(res.data)
          const newListItem = cartItems.filter(item=>item.id !== id);
          setCartItems(newListItem);
@@ -37,7 +37,7 @@ const Cart = () =>{
       }
       const deleteAllItem = async () => {
         try {
-          const res = await axios.delete(`http://localhost:4000/api/empty`)
+          const res = await axios.delete(`https://food-ordering-pi-eta.vercel.app/empty`)
          //  console.log(res.data)
          
         } catch (error) {
